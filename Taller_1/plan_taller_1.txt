@@ -1,0 +1,8 @@
+1.1 utilizar grep o awk para crear un archivo a partir del archivo original
+cd Taller_1
+$ awk -F "," '{print $3}' indices_refraccion.csv > materiales.txt
+1.2 Hacer varios comandos para lograr el punto.
+Primero, crear carpetas(mkdir Vidrios)
+Luego, hacer un wget para las primeras 77 filas, que son vidrios
+Luego para las siguientes(78-90), (91-93), 94, 95, (96-98), (99-102)
+TAL VEZ HAY QUE QUITARLES UNO YA QUE EMPEZÉ EL CONTEO EN 1!!
