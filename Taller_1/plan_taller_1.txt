@@ -14,7 +14,14 @@ $ awk -F "," 'NR==94 {print $4}' indices_refraccion.csv > ExóticoURL.txt
 $ awk -F "," 'NR==95 {print $4}' indices_refraccion.csv > CombustiblesURL.txt
 $ awk -F "," 'NR==96, NR==98 {print $4}' indices_refraccion.csv > MezclasURL.txt
 $ awk -F "," 'NR==99, NR==102 {print $4}' indices_refraccion.csv > AdhesivosURL.txt
-Luego, hacer un wget para las primeras 77 filas, que son vidrios
-Luego para las siguientes(78-87),(88-90), (91-93), 94, 95, (96-98), (99-102)
-TAL VEZ HAY QUE QUITARLES UNO YA QUE EMPEZÉ EL CONTEO EN 1!!
-borrar el archivo con solo las urls
+Luego, hacer un wget para cada uno
+$ wget -i VidriosURL.txt -P Vidrios
+$ wget -i AdhesivosURL.txt -P Adhesivos
+$ wget -i CombustiblesURL.txt -P Combustibles
+$ wget -i ExóticoURL.txt -P Exótico
+$ wget -i MateriaInorgánicaURL.txt -P Materia_inorgánica/
+$ wget -i MateriaOrgánicaURL.txt -P Materia_orgánica/
+$ wget -i MezclasURL.txt -P Mezclas
+$ wget -i PlásticosComercialesURL.txt -P Plásticos_comerciales/
+¿borrar el archivo con solo las urls?
+Adhesivos, Vidrios y Materia Orgánica tienen archivos que parecen repetidos. Será normal?
