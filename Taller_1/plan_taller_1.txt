@@ -1,28 +1,28 @@
 1.1 utilizar grep o awk para crear un archivo a partir del archivo original
 cd Taller_1
-$ awk -F "," '{print $3}' indices_refraccion.csv > materiales.txt
+awk -F "," '{print $3}' indices_refraccion.csv > materiales.txt
 1.2 Hacer varios comandos para lograr el punto.
 Primero, crear carpetas(mkdir Vidrios, mkdir Materia_inorgánica, mkdir Materia_orgánica,
 mkdir Plásticos_comerciales, mkdir Exótico, mkdir Combustibles, mkdir Mezclas, mkdir Adhesivos)
 Crear un nuevo archivo con solo las urls
-$ touch VidriosURL.txt CombustiblesURL.txt ExóticoURL.txt MateriaInorgánicaURL.txt MateriaOrgánicaURL.txt MezclasURL.txt PlásticosComercialesURL.txt
-$ awk -F "," 'NR<78 {print $4}' indices_refraccion.csv > VidriosURL.txt
-$ awk -F "," 'NR==78, NR==87{print $4}' indices_refraccion.csv > MateriaInorgánicaURL.txt
-$ awk -F "," 'NR==88, NR==90 {print $4}' indices_refraccion.csv > MateriaOrgánicaURL.txt
-$ awk -F "," 'NR==91, NR==93 {print $4}' indices_refraccion.csv > PlásticosComercialesURL.txt
-$ awk -F "," 'NR==94 {print $4}' indices_refraccion.csv > ExóticoURL.txt
-$ awk -F "," 'NR==95 {print $4}' indices_refraccion.csv > CombustiblesURL.txt
-$ awk -F "," 'NR==96, NR==98 {print $4}' indices_refraccion.csv > MezclasURL.txt
-$ awk -F "," 'NR==99, NR==102 {print $4}' indices_refraccion.csv > AdhesivosURL.txt
+touch VidriosURL.txt CombustiblesURL.txt ExóticoURL.txt MateriaInorgánicaURL.txt MateriaOrgánicaURL.txt MezclasURL.txt PlásticosComercialesURL.txt
+awk -F "," 'NR<78 {print $4}' indices_refraccion.csv > VidriosURL.txt
+awk -F "," 'NR==78, NR==87{print $4}' indices_refraccion.csv > MateriaInorgánicaURL.txt
+awk -F "," 'NR==88, NR==90 {print $4}' indices_refraccion.csv > MateriaOrgánicaURL.txt
+awk -F "," 'NR==91, NR==93 {print $4}' indices_refraccion.csv > PlásticosComercialesURL.txt
+awk -F "," 'NR==94 {print $4}' indices_refraccion.csv > ExóticoURL.txt
+awk -F "," 'NR==95 {print $4}' indices_refraccion.csv > CombustiblesURL.txt
+awk -F "," 'NR==96, NR==98 {print $4}' indices_refraccion.csv > MezclasURL.txt
+awk -F "," 'NR==99, NR==102 {print $4}' indices_refraccion.csv > AdhesivosURL.txt
 Luego, hacer un wget para cada uno
-$ wget -i VidriosURL.txt -P Vidrios
-$ wget -i AdhesivosURL.txt -P Adhesivos
-$ wget -i CombustiblesURL.txt -P Combustibles
-$ wget -i ExóticoURL.txt -P Exótico
-$ wget -i MateriaInorgánicaURL.txt -P Materia_inorgánica/
-$ wget -i MateriaOrgánicaURL.txt -P Materia_orgánica/
-$ wget -i MezclasURL.txt -P Mezclas
-$ wget -i PlásticosComercialesURL.txt -P Plásticos_comerciales/
+wget -i VidriosURL.txt -P Vidrios
+wget -i AdhesivosURL.txt -P Adhesivos
+wget -i CombustiblesURL.txt -P Combustibles
+wget -i ExóticoURL.txt -P Exótico
+wget -i MateriaInorgánicaURL.txt -P Materia_inorgánica/
+wget -i MateriaOrgánicaURL.txt -P Materia_orgánica/
+wget -i MezclasURL.txt -P Mezclas
+wget -i PlásticosComercialesURL.txt -P Plásticos_comerciales/
 ¿borrar el archivo con solo las urls?
 Adhesivos, Vidrios y Materia Orgánica tienen archivos que parecen repetidos. Será normal?
 ¡¡¡¡ Los comandos anteriores van a ir al archivo indices refraccion terminal.txt
