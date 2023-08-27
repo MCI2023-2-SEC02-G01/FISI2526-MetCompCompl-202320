@@ -5,7 +5,16 @@ $ awk -F "," '{print $3}' indices_refraccion.csv > materiales.txt
 Primero, crear carpetas(mkdir Vidrios, mkdir Materia_inorgánica, mkdir Materia_orgánica,
 mkdir Plásticos_comerciales, mkdir Exótico, mkdir Combustibles, mkdir Mezclas, mkdir Adhesivos)
 Crear un nuevo archivo con solo las urls
+$ touch VidriosURL.txt CombustiblesURL.txt ExóticoURL.txt MateriaInorgánicaURL.txt MateriaOrgánicaURL.txt MezclasURL.txt PlásticosComercialesURL.txt
+$ awk -F "," 'NR<78 {print $4}' indices_refraccion.csv > VidriosURL.txt
+$ awk -F "," 'NR==78, NR==87{print $4}' indices_refraccion.csv > MateriaInorgánicaURL.txt
+$ awk -F "," 'NR==88, NR==90 {print $4}' indices_refraccion.csv > MateriaOrgánicaURL.txt
+$ awk -F "," 'NR==91, NR==93 {print $4}' indices_refraccion.csv > PlásticosComercialesURL.txt
+$ awk -F "," 'NR==94 {print $4}' indices_refraccion.csv > ExóticoURL.txt
+$ awk -F "," 'NR==95 {print $4}' indices_refraccion.csv > CombustiblesURL.txt
+$ awk -F "," 'NR==96, NR==98 {print $4}' indices_refraccion.csv > MezclasURL.txt
+$ awk -F "," 'NR==99, NR==102 {print $4}' indices_refraccion.csv > AdhesivosURL.txt
 Luego, hacer un wget para las primeras 77 filas, que son vidrios
-Luego para las siguientes(78-90), (91-93), 94, 95, (96-98), (99-102)
+Luego para las siguientes(78-87),(88-90), (91-93), 94, 95, (96-98), (99-102)
 TAL VEZ HAY QUE QUITARLES UNO YA QUE EMPEZÉ EL CONTEO EN 1!!
 borrar el archivo con solo las urls
