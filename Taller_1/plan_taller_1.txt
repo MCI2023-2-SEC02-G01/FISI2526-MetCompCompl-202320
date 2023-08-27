@@ -25,3 +25,4 @@ $ wget -i MezclasURL.txt -P Mezclas
 $ wget -i PlásticosComercialesURL.txt -P Plásticos_comerciales/
 ¿borrar el archivo con solo las urls?
 Adhesivos, Vidrios y Materia Orgánica tienen archivos que parecen repetidos. Será normal?
+¡¡¡¡ Los comandos anteriores van a ir al archivo indices refraccion terminal.txt
