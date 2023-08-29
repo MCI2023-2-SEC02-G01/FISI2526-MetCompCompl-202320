@@ -26,3 +26,13 @@ wget -i PlásticosComercialesURL.txt -P Plásticos_comerciales/
 ¿borrar el archivo con solo las urls?
 Adhesivos, Vidrios y Materia Orgánica tienen archivos que parecen repetidos. Será normal?
 ¡¡¡¡ Los comandos anteriores van a ir al archivo indices refraccion terminal.txt
+
+Para el 1.4, lo ideal podría ser:
+Hacer un recorrido de la lista obtenida
+hacer slicing de cada uno de los valores
+convertirlos en números(int())
+a partir de ahí hacer los cálculos
+ponerlos cada uno en una lista
+graficar eso
+
+REVISAR LAS CIFRAS SIGNIFICATIVAS DE TUS GRÁFICOS
